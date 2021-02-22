@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "name": "Comments",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "unique": false,
+      "maxLength": 50,
+      "minLength": 2
+    },
+    "CommentIdentity": {
+      "type": "string",
+      "required": true
+    },
+    "Comment": {
+      "type": "richtext"
+    }
+  }
+}
