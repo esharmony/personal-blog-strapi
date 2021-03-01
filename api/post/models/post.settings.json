@@ -13,7 +13,8 @@
   "attributes": {
     "Title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "SubTitle": {
       "type": "string",
@@ -67,6 +68,21 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "PostType": {
+      "type": "enumeration",
+      "enum": [
+        "Vlog",
+        "Tutorial",
+        "Article",
+        "VideoTutorial"
+      ],
+      "default": "Article",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "unique": false
     }
   }
 }
