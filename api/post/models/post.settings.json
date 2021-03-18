@@ -51,14 +51,8 @@
       "type": "datetime",
       "required": true
     },
-    "comments": {
+    "Comments": {
       "collection": "comments"
-    },
-    "PostIdentity": {
-      "type": "biginteger",
-      "required": true,
-      "unique": true,
-      "private": false
     },
     "CoverImage": {
       "model": "file",
@@ -67,7 +61,7 @@
         "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": true
     },
     "PostType": {
       "type": "enumeration",
@@ -75,14 +69,18 @@
         "Vlog",
         "Tutorial",
         "Article",
-        "VideoTutorial"
+        "VideoTutorial",
+        "QuickTip"
       ],
       "default": "Article",
       "required": true
     },
-    "slug": {
+    "Slug": {
       "type": "string",
       "unique": false
+    },
+    "YouTubeLink": {
+      "type": "string"
     }
   }
 }

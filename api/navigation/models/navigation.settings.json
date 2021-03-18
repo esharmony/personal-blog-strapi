@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "navigations",
   "info": {
-    "name": "Navigation Item",
+    "name": "NavigationItem",
     "description": ""
   },
   "options": {
@@ -16,6 +16,17 @@
       "unique": true,
       "required": true,
       "maxLength": 20
+    },
+    "Slug": {
+      "type": "string"
+    },
+    "MetaTitle": {
+      "type": "string",
+      "required": true
+    },
+    "MetaDescription": {
+      "type": "string",
+      "required": true
     }
   }
 }
