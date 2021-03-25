@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: strapi-deploy
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: strapi
+  minReadySeconds: 10
+  strategy:
+    type: 
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: strapi
+        version: 0.0.1
+    spec:
+      containers:
+      - name: strapi-pod
+        image: docker.pkg.github.com/esharmony/personal-blog-strapi/personal-blog-strapi:0.0.3
+        #imagePullPolicy: IfNotPresent
+        #image: auth-api:0.1.25
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 1337
+      imagePullSecrets:
+        - name: regcred
