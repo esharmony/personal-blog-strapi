@@ -7,7 +7,7 @@ module.exports = {
         "http://localhost:3000",
         "https://www.sabbaticaldev.co.uk",
         "https://sabbaticaldev.co.uk",
-        "https://easypie.co.uk",
+        "https://sabbatical-api.herokuapp.com",
         "http://localhost:1337"
       ],
     },
