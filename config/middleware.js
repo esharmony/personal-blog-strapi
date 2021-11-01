@@ -11,5 +11,11 @@ module.exports = {
         "http://localhost:1337"
       ],
     },
+    gzip: {
+      enabled: true,
+      options: {
+        br: false
+      }
+    }
   },
 };
