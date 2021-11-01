@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: strapi-pod
-        image: docker.pkg.github.com/esharmony/personal-blog-strapi/personal-blog-strapi:0.0.6
+        image: ghcr.io/esharmony/personal-blog-strapi/personal-blog-strapi:0.0.7
         #imagePullPolicy: IfNotPresent
         #image: auth-api:0.1.25
         imagePullPolicy: Always
