@@ -9,12 +9,12 @@ module.exports = {
     lifecycles: {
         beforeCreate: async (data) => {
             if (data.Title) {
-                data.Slug = slugify(data.Title);
+                data.Slug = slugify(data.Title, {remove: /[*+~.()'"!:@]/g});
             }
         },
         beforeUpdate: async (params, data) => {
             if (data.Title) {
-                data.Slug = slugify(data.Title);
+                data.Slug = slugify(data.Title, {remove: /[*+~.()'"!:@]/g});
             }
         },
     },
